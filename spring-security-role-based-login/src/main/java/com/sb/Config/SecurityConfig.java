@@ -31,7 +31,7 @@ public class SecurityConfig {
 				  .formLogin(form -> form
 			                .loginPage("/login.html")     // use your custom login page
 			                .loginProcessingUrl("/login") // form action in login.html
-			                .successForwardUrl("/postLogin") // after login redirect
+			                .defaultSuccessUrl("/postLogin", true) // after login redirect
 			                .permitAll()
 			            )
 				.logout(logout -> logout
